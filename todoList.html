@@ -1,0 +1,405 @@
+<!-- <!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> simple calculator </title>
+</head>
+
+<body>
+    <h2> calculator</h2>
+    <input type="text" id="num1" placeholder="number 1">
+    <input type="text" id="num2" placeholder="number2">
+    <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <button onclick="calculate()">calculate</button>
+    <p id="result"></p>
+    <script>
+        function calculate() {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            const op = document.getElementById('operation').value;
+            let res;
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("please enter valid numbers");
+                return;
+            }
+            switch(op){
+                case '+' : res = num1 + num2; break;
+                case '-' : res = num1 - num2; break;
+                case '*' : res = num1 * num2; break;
+                case '/' : res = (num2 !== 0) ? num1 / num2 : "Cannot divide by zero"; break;
+                case '%' : res = (num2 !== 0) ? num1 % num2 : "Cannot divide by zero"; break;
+                default :
+                    res = "invalid operation";
+                    break;
+            }
+            document.getElementById('result').textContent = `result: ${res}`;
+        }
+    </script>
+</body>
+
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+        }
+        .todo-container {
+            background: rgb(239, 1, 1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            margin-right: 5px;
+        }
+        button {
+            padding: 8px 12px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 8px;
+            background: #f5f4f4;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .delete-btn {
+            background: blue(38, 0, 255);
+            color: rgb(138, 194, 54);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Add a new task                   ">
+        <button onclick="addTask()">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        function addTask() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+
+            if (taskText === '') {
+                alert('Please enter a task!');
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.textContent = taskText;
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.onclick = () => li.remove();
+
+            li.appendChild(deleteBtn);
+
+            document.getElementById('taskList').appendChild(li);
+            taskInput.value = '';
+        }
+    </script>
+
+</body>
+</html> -->
+<!-- ############################################### -->
+
+
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+    <title> color picker </title>
+</head>
+<body>
+    <h2>pick a background color</h2>
+    <input type="color" id="color picker"value="#ffffff">
+    <button onclick="changeColor()">change background</button>
+    <script>
+        functionchangecolor(){
+            constcolor=documenet.getElementByID('colorpicker').value; document.body.style.backgroundcolor=color;
+                }
+    </script>
+    </body>
+    </html> -->
+<!-- <!DOCTYPE html>
+<html>
+    <body>
+        <h2>JavaScript Timing </h2>
+        <p>click"Try it".wait 12 second,and the page will alert"bye byee".</p>
+        <button onclick="setTimeout(myfunction,10000);">click</button>
+        <script>
+            function myfunction(){
+                //alert ('HEllo');
+                window.location.href="https://ramaneducation.org/";
+                       }
+        </script>
+    </body>
+</html> -->
+<!-- ########################################################################### -->
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Timings</h2>
+    <p>A Script on this page starts this clock:</p>
+    <p align="left" id="demo"></p>
+
+    <script>
+      setInterval(MyTimer, 1000);
+
+      function MyTimer() {
+        const d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+      }
+    </script>
+  </body>
+</html> -->
+
+
+<!-- #################### -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blinking Page</title>
+  <style>
+    @keyframes blink {
+      0%   { background-color: white; }
+      50%  { background-color: black; }
+      100% { background-color: white; }
+    }
+
+    body {
+      animation: blink 1s infinite;
+      color: red;
+      font-size: 2em;
+      text-align: center;
+      padding-top: 20%;
+    }
+  </style>
+</head>
+<body>
+            HELLO!
+</body>
+</html> -->
+
+
+
+<!-- ############################################# -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>CHANGER</title>
+  <style>
+    body {
+      transition: background-color 0.1s ease;
+      text-align: center;
+      font-family: sans-serif;
+      padding-top: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body> 
+  <h2>Click to Change Background Color</h2>
+  <button onclick="changeColor()">Change Color</button>
+
+  <script>
+    function changeColor() {
+      const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics & Cargo Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        header { background: #2c3e50; color: #fff; padding: 15px; text-align: center; }
+        nav { background: #34495e; display: flex; justify-content: space-around; padding: 10px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { padding: 20px; }
+        section { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2, h3 { margin-bottom: 15px; }
+        input, button, textarea { width: 100%; padding: 10px; margin: 5px 0 15px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #2980b9; color: white; border: none; cursor: pointer; }
+        button:hover { background: #3498db; }
+        .front-page img, .transport-gallery img { width: 100%; max-width: 400px; border-radius: 10px; margin: 10px; }
+        .transport-gallery { display: flex; flex-wrap: wrap; justify-content: center; }
+        .rating-stars { cursor: pointer; color: gray; font-size: 24px; }
+        .rated { color: gold; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Logistics & Cargo Portal</h1>
+    </header>
+
+    <nav>
+        <a href="#frontpage">Home</a>
+        <a href="#register">Register</a>
+        <a href="#track">Track</a>
+        <a href="#customers">Customers</a>
+        <a href="#rating">Rate Us</a>
+    </nav>
+
+    <div class="container">
+        <section id="frontpage" class="front-page">
+            <h2>Welcome to Our Logistics & Cargo Service</h2>
+            <img src="https://via.placeholder.com/800x400?text=Logistics+Vehicle" alt="Logistics Vehicle">
+            <p>Efficient and reliable cargo solutions for your business needs.</p>
+            <h3>Our Transport Vehicles</h3>
+            <div class="transport-gallery">
+                <img src="https://via.placeholder.com/400x200?text=Truck" alt="Truck">
+                <img src="https://canva.com/content-partner/?utm_medium=partner&utm_source=pixabay&utm_campaign=retouch_in_canva_edit_image&image-url=https%3A//pixabay.com/get/g4ffa7a758a59401385bf9f0d5e47246843e9b1c589c7e3eccccdcd8845af1ac7991f3b77e1228c8c7ca7f4fd32338f03_1920.jpg%3Flonglived%3D&external-id=6794508&canva-media-id=" alt="Container Ship">
+                <img src="https://via.placeholder.com/400x200?text=Cargo+Plane" alt="Cargo Plane">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Container_ship.jpg" alt="Real Container Ship">
+        
+           </div>
+        </section>
+
+        <!-- Remaining sections remain unchanged -->
+        
+        <section id="register">
+            <h2>Customer Registration</h2>
+            <form id="registrationForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="track">
+            <h2>Track Cargo</h2>
+            <form id="trackForm">
+                <input type="text" id="trackingId" placeholder="Enter Tracking ID" required>
+                <button type="submit">Track</button>
+            </form>
+            <div id="trackResult"></div>
+        </section>
+
+        <section id="customers">
+            <h2>Registered Customers</h2>
+            <div id="customerList"></div>
+        </section>
+
+        <section id="rating">
+            <h2>Rate Our Service</h2>
+            <div id="starRating">
+                <span class="rating-stars" data-value="1">★</span>
+                <span class="rating-stars" data-value="2">★</span>
+                <span class="rating-stars" data-value="3">★</span>
+                <span class="rating-stars" data-value="4">★</span>
+                <span class="rating-stars" data-value="5">★</span>
+            </div>
+            <p id="ratingValue"></p>
+        </section>
+    </div>
+
+    <script>
+        const customers = [];
+
+        function hashPassword(password) {
+            return btoa(password);
+        }
+
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = hashPassword(document.getElementById('password').value);
+
+            customers.push({ name, email, phone, password });
+            alert('Customer registered successfully!');
+            displayCustomers();
+            this.reset();
+        });
+
+        function displayCustomers() {
+            const list = document.getElementById('customerList');
+            list.innerHTML = customers.length ? customers.map(c =>
+                `<p><strong>${c.name}</strong> | Email: ${c.email} | Phone: ${c.phone}</p>`
+            ).join('') : 'No customers registered.';
+        }
+
+        document.getElementById('trackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const trackingId = document.getElementById('trackingId').value;
+            document.getElementById('trackResult').textContent = getTrackingDetails(trackingId);
+        });
+
+        function getTrackingDetails(id) {
+            const dummyData = {
+                'ABC123': 'Location: Delhi | Status: In Transit | Estimated Delivery: 2 days',
+                'XYZ789': 'Location: Mumbai | Status: Delivered',
+                'LMN456': 'Location: Kolkata | Status: Awaiting Pickup'
+            };
+            return dummyData[id] || 'Tracking ID not found.';
+        }
+
+        // Rating
+        const stars = document.querySelectorAll('.rating-stars');
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                const rating = star.getAttribute('data-value');
+                document.getElementById('ratingValue').textContent = `You rated us ${rating} out of 5.`;
+                stars.forEach(s => s.classList.toggle('rated', s.getAttribute('data-value') <= rating));
+            });
+        });
+    </script>
+</body>
+</html>
